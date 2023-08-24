@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("введите первое число:");
+        int a = sc.nextInt();
+
+        System.out.print("введите второе число:");
+        int b = sc.nextInt();
+
+        System.out.print("Введите нужную вам операцию(+, -, *, /, %)");
+        char op = sc.next().charAt(0);
+        podshet(a, b, op);
+    }
+    public static int podshet(int a, int b, char op)
+    {
+        int ans = 0;
+        if (op == '+') {
+            ans = a + b;
+        }
+        else if (op == '-') {
+            ans = a - b;
+        }
+        else if (op == '*') {
+            ans = a * b;
+        }
+        else if (op == '%') {
+            ans = a % b;
+        }
+        else if (op == '/') {
+            ans = a / b;
+        }
+        System.out.println("Ваш ответ:" + ans);
+        return ans;
+    }
+}
